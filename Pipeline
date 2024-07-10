@@ -1,0 +1,13 @@
+#Text Classification
+
+from transformers import pipeline
+classifier = pipeline('text-classification')
+result = classifier("Hugging Face Transformers makes NLP easy and fun!")
+print(result)
+
+#Sentiment Analysis
+
+from transformers import pipeline
+classifier = pipeline('sentiment-analysis')
+result = classifier("I love using Hugging Face Transformers!")
+print(result)
