@@ -1,13 +1,69 @@
-#Text Classification
+# Text Classification
 
 from transformers import pipeline
 classifier = pipeline('text-classification')
 result = classifier("Hugging Face Transformers makes NLP easy and fun!")
 print(result)
 
-#Sentiment Analysis
+# Sentiment Analysis
 
 from transformers import pipeline
 classifier = pipeline('sentiment-analysis')
 result = classifier("I love using Hugging Face Transformers!")
+print(result)
+
+# Named Entity Recognition (NER)
+
+from transformers import pipeline
+ner = pipeline('ner')
+result = ner("Hugging Face Inc. is based in New York City.")
+print(result)
+
+# Question Answering
+
+from transformers import pipeline
+qa = pipeline('question-answering')
+result = qa(question="Where is Hugging Face based?", context="Hugging Face Inc. is based in New York City.")
+print(result)
+
+# Text Generation
+
+from transformers import pipeline
+generator = pipeline('text-generation')
+result = generator("Once upon a time, there was a brave knight who")
+print(result)
+
+# Translation
+
+from transformers import pipeline
+translator = pipeline('translation_en_to_fr')
+result = translator("Hugging Face Transformers makes NLP easy and fun!")
+print(result)
+
+# Summarization
+
+from transformers import pipeline
+summarizer = pipeline('summarization')
+result = summarizer("Hugging Face Transformers provides state-of-the-art machine learning models that are easy to use.")
+print(result)
+
+# Fill-Mask
+
+from transformers import pipeline
+unmasker = pipeline('fill-mask')
+result = unmasker("Hugging Face Transformers makes NLP [MASK] and fun!")
+print(result)
+
+# Feature Extraction
+
+from transformers import pipeline
+feature_extractor = pipeline('feature-extraction')
+result = feature_extractor("Hugging Face Transformers makes NLP easy and fun!")
+print(result)
+
+# Zero-Shot Classification
+
+from transformers import pipeline
+classifier = pipeline('zero-shot-classification')
+result = classifier("Hugging Face Transformers makes NLP easy and fun!", candidate_labels=["technology", "education", "entertainment"])
 print(result)
